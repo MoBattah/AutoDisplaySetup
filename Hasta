@@ -8,4 +8,5 @@ fi
 xrandr | grep "HDMI1 connected" >> /dev/null
 if [ $? -eq 0 ] ; then
 echo "HDMI is only connected, setting up home environment."
+xrandr --output HDMI1 --mode 2560x1440 --pos 0x0 --rotate normal --output VIRTUAL1 --off --output eDP1 --mode 1366x768 --pos 2560x568 --rotate normal --out    put VGA1 --off
 fi
