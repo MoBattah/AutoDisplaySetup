@@ -5,7 +5,7 @@
 xrandr | grep "VGA-1 connected" >> /dev/null
 if [ $? -eq 0 ] ; then
 echo "VGA is connected, setting up work environment."
-xrandr --output HDMI1 --off --output VIRTUAL1 --off --output eDP1 --mode 1366x768 --pos 0x132 --rotate normal --output VGA1 --mode 1600x900 --pos 1366x0 --rotate normal
+xrandr output VGA-1 --mode 1600x900 --pos 2566x520 --rotate normal --output HDMI-1 --mode 1920x1200 --pos 1366x0 --rotate left --output eDP-1 --primary --mode 1366x768 --pos 0x520 --rotate normal
 fi
 
 xrandr | grep "HDMI-1 connected" >> /dev/null
